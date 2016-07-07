@@ -1,10 +1,15 @@
 describe('removeAllVowels Filter', function () {
-	var $controller;
+  var $controller;
 
-	beforeEach(module('app'));
+  beforeEach(module('app'));
 
-	beforeEach(inject(function ($injector) {
-		$filter = $injector.get('$filter');
-	}));
+  beforeEach(inject(function ($injector) {
+    $filter = $injector.get('$filter');
+  }));
 
+  it('should remove all vowels', function () {
+    var results = $filter('removeAllVowels')('removeAllVowels');
+
+    expect(results).toEqual('rmvllVwls');
+  });
 });
